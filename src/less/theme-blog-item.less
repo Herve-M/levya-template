@@ -1,0 +1,54 @@
+@import "variables-superhero.less";
+@import "mixin.less";
+
+.lvy-blog-item-container {
+  .lvy-blog-item {
+    > img.lvy-blog-img {
+      //border-radius: 5px 5px 0 0;
+    }
+  }
+}
+
+.lvy-blog-item-content {
+
+  .entry-meta {
+
+   > span {
+     display: inline-block;
+     color: #999;
+     margin-right: 10px;
+
+     a {
+       color: #999;
+     }
+
+   }
+
+  }
+}
+
+.lvy-widget {
+  margin-bottom: 20px;
+
+  &.search {
+
+  }
+
+  &.categories {
+   ul {
+     list-style: outside none none;
+     padding: 0px;
+   }
+  }
+
+  &.tags {
+    ul {
+      list-style: outside none none;
+      padding: 0px;
+      > li {
+        display: inline-block;
+        margin: 2px;
+      }
+    }
+  }
+}

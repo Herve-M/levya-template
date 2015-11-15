@@ -12,13 +12,13 @@ module.exports = function(grunt) {
       assets: {
         css: './src/less/',
         js: './src/js/',
-        font: './src/font/',
+        font: './src/fonts/',
         bower: './bower_components/'
       },
       // Production where Grunt output the files
       css: './public/css/',
       js: './public/js/',
-      font: './public/font/'
+      font: './public/fonts/'
     },
 
     // Task configuration
@@ -34,10 +34,16 @@ module.exports = function(grunt) {
             compress: false,
           },
           files: {
-            //Bootstrap
             "<%= paths.css %>bootstrap.css":"<%= paths.assets.css %>bootstrap.less",
-            //compiling wordpress.less into wordpress.css
-            "<%= paths.css %>wordpress.css":"<%= paths.assets.css %>wordpress.less",
+            "<%= paths.css %>font-awesome.css":"<%= paths.assets.css %>font-awesome.less",
+            //"<%= paths.css %>flexslider.css":"<%= paths.assets.css %>flexslider.less",
+            "<%= paths.css %>theme-about-us.css":"<%= paths.assets.css %>theme-about-us.less",
+            "<%= paths.css %>theme-base.css":"<%= paths.assets.css %>theme-base.less",
+            "<%= paths.css %>theme-index.css":"<%= paths.assets.css %>theme-index.less",
+            "<%= paths.css %>theme-blog.css":"<%= paths.assets.css %>theme-blog.less",
+            "<%= paths.css %>theme-blog-item.css":"<%= paths.assets.css %>theme-blog-item.less",
+            "<%= paths.css %>theme-faq.css":"<%= paths.assets.css %>theme-faq.less",
+            "<%= paths.css %>theme-service.css":"<%= paths.assets.css %>theme-service.less",
           }
       },
       production: {
@@ -45,10 +51,16 @@ module.exports = function(grunt) {
             compress: true,
           },
           files: {
-            //Bootstrap
             "<%= paths.css %>bootstrap.min.css":"<%= paths.assets.css %>bootstrap.less",
-            //compiling wordpress.less into wordpress.min.css
-            "<%= paths.css %>wordpress.min.css":"<%= paths.assets.css %>wordpress.less",
+            "<%= paths.css %>font-awesome.min.css":"<%= paths.assets.css %>font-awesome.less",
+            //"<%= paths.css %>flexslider.min.css":"<%= paths.assets.css %>flexslider.less",
+            "<%= paths.css %>theme-about-us.min.css":"<%= paths.assets.css %>theme-about-us.less",
+            "<%= paths.css %>theme-base.min.css":"<%= paths.assets.css %>theme-base.less",
+            "<%= paths.css %>theme-index.min.css":"<%= paths.assets.css %>theme-index.less",
+            "<%= paths.css %>theme-blog.min.css":"<%= paths.assets.css %>theme-blog.less",
+            "<%= paths.css %>theme-blog-item.min.css":"<%= paths.assets.css %>theme-blog-item.less",
+            "<%= paths.css %>theme-faq.min.css":"<%= paths.assets.css %>theme-faq.less",
+            "<%= paths.css %>theme-service.min.css":"<%= paths.assets.css %>theme-service.less",
           }
       }
     },
@@ -80,6 +92,15 @@ module.exports = function(grunt) {
           {
             src: "<%= paths.assets.bower %>jquery/dist/jquery.js", dest: "<%= paths.js %>jquery.js",
           },
+          {
+            src: "<%= paths.assets.bower %>flexslider/jquery.flexslider.js", dest: "<%= paths.js %>jquery.flexslider.js",
+          },
+          {
+            cwd: "<%= paths.assets.bower %>bootstrap/fonts/", src: "*.*", dest: "<%= paths.font %>", expand: true,
+          },
+          {
+            cwd: "<%= paths.assets.bower %>font-awesome/fonts/", src: "*.*", dest: "<%= paths.font %>", expand: true,
+          },
         ],
       },
       production: {
@@ -90,15 +111,24 @@ module.exports = function(grunt) {
           {
             src: "<%= paths.assets.bower %>jquery/dist/jquery.min.js", dest: "<%= paths.js %>jquery.min.js",
           },
+          {
+            src: "<%= paths.assets.bower %>flexslider/jquery.flexslider-min.js", dest: "<%= paths.js %>jquery.flexslider-min.js",
+          },
+          {
+            cwd: "<%= paths.assets.bower %>bootstrap/fonts/", src: "*.*", dest: "<%= paths.font %>", expand: true,
+          },
+          {
+            cwd: "<%= paths.assets.bower %>font-awesome/fonts/", src: "*.*", dest: "<%= paths.font %>", expand: true,
+          },
         ],
       },
     },
     clean: {
       development: {
-        src: ["<%= paths.js %>*.js", "<%= paths.css %>*.css"]
+        src: ["<%= paths.js %>*.js", "<%= paths.css %>*.css", "<%= paths.font %>*"]
       },
       production: {
-        src: ["<%= paths.js %>*.min.js", "<%= paths.css %>*.min.js"]
+        src: ["<%= paths.js %>*.min.js", "<%= paths.css %>*.min.js", "<%= paths.font %>*"]
       }
     },
     watch: {

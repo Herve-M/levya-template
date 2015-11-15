@@ -1,0 +1,21 @@
+#Levya Org. : LDAP
+==================
+# Names should be added to this file as
+#	Name or Organization <email address>
+#
+# Please keep the list sorted.
+#
+# Use the following command to generate the list:
+#
+#	git shortlog -se | awk '{print $2 " " $3 " " $4}'
+
+##Original Author:
+------------------
+MATYSIAK Hervé <herve.matysiak@viacesi.fr>
+
+##Contributors :
+----------------
+
+##Also thanks to:
+-----------------
+Iron Summit Media Strategies, LLC (startbootstrap-modern-business)

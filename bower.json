@@ -1,6 +1,9 @@
 {
   "name": "levya-template",
   "dependencies": {
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3",
+    "outdated-browser": "~1.1",
+    "shufflejs": "~3.1",
+    "font-awesome": "~4"
   }
 }

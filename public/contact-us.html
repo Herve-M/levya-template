@@ -26,17 +26,14 @@
   	<meta name="msapplication-TileImage" content="/favicon-144.png">
   	<meta name="msapplication-config" content="/browserconfig.xml">
 
-    <title>Levya Home</title>
+    <title>Levya - Contact us</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
-    <!-- Font Awesome CSS -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="css/theme-base.css" rel="stylesheet">
-    <link href="css/theme-index.css" rel="stylesheet">
+    <link href="css/theme-contact.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -56,19 +53,16 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">
-              <!-- <img alt="Brand" src="favicon-32.png" class="pull-left"> -->
-              Levya Org.
-            </a>
+            <a class="navbar-brand" href="#">Levya Org.</a>
           </div>
           <div id="navbar" class="collapse navbar-collapse navbar-right">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="about-us.html">About Us</a></li>
               <li><a href="services.html">Services</a></li>
               <li><a href="portfolio.html">Portfolio</a></li>
               <li><a href="blog.html">Blog</a></li>
-              <li><a href="contact-us.html">Contact</a></li>
+              <li class="active"><a href="contact-us.html">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -76,31 +70,86 @@
     </header>
 
     <div class="container">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    </div><!-- /.container -->
-
-    <section id="main-section">
-      <div class="container">
-          <div class="row">
-      			<div class="col-sm-4 homewidget">
-      				<span><i class="glyphicon glyphicon-glass"></i></span>
-      				<h3> Web design</h3>
-      				<p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vehicula erat non congue cursus. Aenean auctor nulla quis augue dictum, sed sagittis odio varius <a href="#"> Link </a> </p>
-      			</div>
-      			<div class="col-sm-4 homewidget">
-      				<span><i class="glyphicon glyphicon-star"></i></span>
-      				<h3>  Web development</h3>
-      				<p> Duis tempus leo vitae ipsum viverra, blandit condimentum sapien porttitor. Duis porttitor sed metus eget mollis. Curabitur bibendum imperdiet tortor, ut pulvinar purus elementum nspendisse at erat luctus. </p>
-      			</div>
-      			<div class="col-sm-4 homewidget">
-      				<span><i class="glyphicon glyphicon-heart"></i></span>
-      				<h3> User interface</h3>
-      				<p> Cras aliquet venenatis porttitor. Donec rutrum sapien et sapien dignissim, eu dapibus mi molestie. Suspendisse dictum convallis quam et sodales. Praesent non enim et magna congue gravida.  </p>
-      			</div>
-          </div>
+      <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Contact
+                    <small>Subheading</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Contact</li>
+                </ol>
+            </div>
         </div>
-    </section>
+
+        <!-- Contact Form -->
+        <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+        <div class="row">
+            <div class="col-md-8">
+                <h3>Send us a Message</h3>
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Full Name:</label>
+                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Phone Number:</label>
+                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Email Address:</label>
+                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Message:</label>
+                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
+            <div class="col-md-4">
+                <h3>Contact Details</h3>
+                <p>
+                    3481 Melrose Place<br>Beverly Hills, CA 90210<br>
+                </p>
+                <p><i class="fa fa-phone"></i>
+                    <abbr title="Phone">P</abbr>: (123) 456-7890</p>
+                <p><i class="fa fa-envelope-o"></i>
+                    <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">name@example.com</a>
+                </p>
+                <p><i class="fa fa-clock-o"></i>
+                    <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
+                <ul class="list-unstyled list-inline list-social-icons">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div><!-- /.container -->
 
     <section id="pre-footer">
       <div class="container">
@@ -146,7 +195,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/base.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/contact.js"></script>
 
     </script>
   </body>
